@@ -6,7 +6,12 @@ on:
 jobs:
   build-kernel:
     name: Build kernel
-    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      
     steps:
       - name: Build it
         uses: dabao1955/kernel_build_action@main
