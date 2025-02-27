@@ -26,6 +26,6 @@ jobs:
           disable-lto: true
           ksu: true
           ksu-version: v0.9.5
-          anykernel3: true
-          # bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot1_n.img
+          anykernel3: false
+          bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot1_n.img
           extra-cmd: LD=ld.lld
