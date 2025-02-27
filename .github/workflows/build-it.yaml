@@ -1,0 +1,25 @@
+name: Build self-used kernel for my device
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build kernel
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build it
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone
+          kernel-branch: new
+          config: sunstone_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          android-version: 14
+          aosp-clang-version: r383902
+          ksu: true
+          ksu-version: v0.9.5
+          anykernel3: false
+          bootimg-url: https://drive.usercontent.google.com
