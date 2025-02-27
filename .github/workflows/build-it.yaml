@@ -11,15 +11,16 @@ jobs:
       - name: Build it
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/kamikaonashi/kernel_xiaomi_stone_darkmoon
-          kernel-branch: darkmoon
-          config: stone_defconfig
+          # kernel-url: https://github.com/kamikaonashi/kernel_xiaomi_stone_darkmoon
+          kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone
+          kernel-branch: new # darkmoon
+          config: sunstone_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          android-version: 14
-          aosp-clang-version: r487747c
-          ksu: false
-          #ksu-version: v0.9.5
+          android-version: 12
+          aosp-clang-version: r383902b1
+          ksu: true
+          ksu-version: v0.9.5
           anykernel3: false
           bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot.img
