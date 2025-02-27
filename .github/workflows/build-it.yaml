@@ -24,3 +24,4 @@ jobs:
           ksu-version: v0.9.5
           anykernel3: false
           bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot.img
+          extra-cmd: LD=ld.lld
