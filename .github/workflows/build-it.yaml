@@ -14,7 +14,7 @@ jobs:
       
     steps:
       - name: Install tool
-        run: sudo apt update & sudo apt install clang gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi llvm g++-multilib bison gperf zlib1g-dev automake
+        run: sudo apt update & sudo apt install clang gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi llvm gcc-multilib g++-multilib bison gperf zlib1g-dev automake
       - name: Build it
         uses: dabao1955/kernel_build_action@main
         with:
