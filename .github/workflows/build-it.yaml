@@ -13,18 +13,16 @@ jobs:
       contents: read
       
     steps:
-      - name: Install tool
-        run: sudo apt update & sudo apt install clang gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi llvm bison gperf zlib1g-dev automake
       - name: Build it
         uses: dabao1955/kernel_build_action@main
         with:
-          # kernel-url: https://github.com/kamikaonashi/kernel_xiaomi_stone_darkmoon
-          kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone
-          kernel-branch: new # darkmoon
-          config: sunstone_defconfig
+          kernel-url: https://github.com/kamikaonashi/kernel_xiaomi_stone_darkmoon
+          # kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone
+          kernel-branch: darkmoon
+          config: stone_defconfig
           arch: arm64
-          aosp-gcc: false
-          aosp-clang: false
+          aosp-gcc: true
+          aosp-clang: true
           android-version: 12
           aosp-clang-version: r383902
           disable-lto: true
