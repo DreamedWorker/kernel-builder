@@ -17,7 +17,7 @@ jobs:
         uses: dabao1955/kernel_build_action@c2dcceb6dda345d1bf36459028928bea9c5e28a1
         with:
           kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone_darkmoon
-          kernel-branch: wip
+          kernel-branch: darkmoon
           config: stone_defconfig
           arch: arm64
           aosp-gcc: true
