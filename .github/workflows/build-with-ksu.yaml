@@ -16,16 +16,16 @@ jobs:
       - name: Build it
         uses: dabao1955/kernel_build_action@c2dcceb6dda345d1bf36459028928bea9c5e28a1
         with:
-          kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone_darkmoon
-          kernel-branch: darkmoon
-          config: stone_defconfig
+          kernel-url: https://github.com/MiCode/Xiaomi_Kernel_OpenSource
+          kernel-branch: moonstone-s-oss
+          config: defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r536225
           disable-lto: true
-          ksu: true
-          ksu-version: v0.9.5
+          ksu: false
+          # ksu-version: v0.9.5
           anykernel3: false
           bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot1_n.img
           extra-cmd: LD=ld.lld
