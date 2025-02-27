@@ -14,7 +14,7 @@ jobs:
       
     steps:
       - name: Build it
-        uses: dabao1955/kernel_build_action@main
+        uses: dabao1955/kernel_build_action@ff256c28d5358e5c0ed51c2619486012aff0f0b0
         with:
           kernel-url: https://github.com/kamikaonashi/kernel_xiaomi_stone_darkmoon
           # kernel-url: https://github.com/DreamedWorker/kernel_xiaomi_stone
@@ -29,5 +29,5 @@ jobs:
           ksu: false
           # ksu-version: v0.9.5
           anykernel3: false
-          bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot.img
+          bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot1_n.img
           extra-cmd: LD=ld.lld
