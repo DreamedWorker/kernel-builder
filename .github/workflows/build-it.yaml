@@ -18,8 +18,8 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           android-version: 14
-          # aosp-clang-version: r383902
+          aosp-clang-version: r487747c
           ksu: false
-          # ksu-version: v0.9.5
+          #ksu-version: v0.9.5
           anykernel3: false
           bootimg-url: https://github.com/DreamedWorker/kernel-builder/releases/download/0.0.0/boot.img
