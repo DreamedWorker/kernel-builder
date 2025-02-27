@@ -13,6 +13,8 @@ jobs:
       contents: read
       
     steps:
+      - name: Install tool
+        run: sudo apt update & sudo apt install clang gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi llvm g++-multilib bison gperf zlib1g-dev automake
       - name: Build it
         uses: dabao1955/kernel_build_action@main
         with:
@@ -21,10 +23,11 @@ jobs:
           kernel-branch: new # darkmoon
           config: sunstone_defconfig
           arch: arm64
-          aosp-gcc: true
-          aosp-clang: true
+          aosp-gcc: false
+          aosp-clang: false
           android-version: 12
           aosp-clang-version: r383902
+          disable-lto: true
           ksu: false
           # ksu-version: v0.9.5
           anykernel3: false
